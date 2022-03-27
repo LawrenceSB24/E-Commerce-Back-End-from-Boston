@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   // find a single tag by its `id`
   // be sure to include its associated Product data
-  Tag.findByPk({where: {id: req.params.id}, include: [{model: Product, through: ProductTag}]})
+  Tag.findOne({where: {id: req.params.id}, include: [{model: Product, through: ProductTag}]})
   .then((dbTag) => {res.json(dbTag)})
   .catch((err) => {
     console.log(err);
