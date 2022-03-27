@@ -42,112 +42,24 @@ THEN I am able to successfully create, update, and delete data in my database
 > 4. dotenv: Stores sensitive data like MySQL password, username, and database name
 
 
-**NOTE** This next section WILL BE deleted upon completion
+## Usage
+To use this application, perform the following tasks:
 
-## Database Models (schema.sql)
-* `Category`
-    * `id`
-        * Interger.
-        * Doesn't allow null values.
-        * Set as primary key.
-        * Uses auto increment.
-    
-    * `category_name`
-        * String.
-        * Doesn't allow null values.
+> 1. You need to clone the repository into the command line
+> 2. Type in `npm install` and the name of the module you'll need to run the application in the command line. 
+> 3. Type `npm run seed` to seed the database with the placeholder information
+> 4. Run `mysql -u root -p` to run the MySQL database for viewing the contents of the database
+> 5. Type `npm start` or `node server.js` to start the application
+> 6. If you have Insomnia, then you can create, update, post, and delete categories, products, and tags respectively
 
-* `Product`
-    * `id`
-        * Interger.
-        * Doesn't allow null values.
-        * Set as primary key.
-        * Uses auto increment.
-    
-    * `product_name`
-        * String.
-        * Doesn't allow null values.
+## Contributions
+ For further contributions to the applications, you can either clone the repository and push into the repo or contact me directly at my Github/email address
 
-    * `price`
-        * Decimal.
-        * Doesn't allow null values.
-        * Validates that the value is a decimal.
-    
-    * `stock`
-        * Integer.
-        * Doesn't allow null values.
-        * Set a default value of `10`.
-        * Validates that the value is numeric.
-    
-    * `category_id`
-        * Integer.
-        * Referneces the `Category` model's `id`.
+ ## Questions
+ For any further questions, you can contact me with:
+ * GitHub: https://github.com/LawrenceSB24
+ * Email: lawrs2022@gmail.com or lawrsblundo22@outlook.com
 
-* `Tag`
-    * `id`
-        * Integer.
-        * Doesn't allow null values.
-        * Set as primary key.
-        * Uses auto increment.
-    
-    * `tag_name`
-        * String.
+ ## Video
 
-* `ProductTag`
-    * `id`
-        * Integer.
-        * Doesn't allow null values.
-        * Set as primary key.
-        * Uses auto increment.
-    
-    * `product_id`
-        * Integer.
-        * References the `Product` model's `id`.
-    
-    * `tag_id`
-        * Integer.
-        * References the `Tag` model's `id`.
-
-
-===============================================================
-
-## Associations
-
-1. `Product` belongs to `Category`
-
-    * `Category` has many `Product` models.
-
-    * a category can have multiple products but only one product can belong to one category.
-
-2. `Product` belongs to many `Tag` models, and `Tag` belongs to many `Product` models
-
-    * Allow products to have multiple tags and tags to have multiple products.
-        * Use `ProductTag` through model.
-
-**Hint** Remember foreign key relationships to match columns created in respective models.
-
-===============================================================
-
-## API Routes
-
-* Fill out unfinished routes to perform create, update, read, and delete operations via Sequelize models:
-
-    * `product-routes.js`
-    * `tag-routes.js`
-    * `category-routes.js`
-
-    ***Note*** Functionality for creating the many-to-many relationship for the products has been created
-
-    **Hint** Review mini-project code for syntax help and use model's column definitions to determine req.body for POST and PUT routes
-
-===============================================================
-
-## Seeding Database
-
-After models and routes have been created
-    * Run `npm run seed` to seed data to your database so you can test the routes
-
-===============================================================
-
-## Sync Sequelize to the Database on Server Start
-
-Create the code needed in server.js to sync Sequelize models to the MySQL database on server start
+ **Disclaimer** Ok...so for tonight I do not possess the video/gif of the application functionality. I do promise that this will be added tomorrow night at the latest.
