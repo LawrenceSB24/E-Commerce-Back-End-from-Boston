@@ -37,7 +37,7 @@ router.post('/', (req, res) => {
 
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
-  Category.update({category_name: req.params.category_name},{where: {id: req.params.id}})
+  Category.update(req.body)
   .then((updatedDbCata) => {res.json(updatedDbCata)})
   .catch((err) => {
     console.log(err);
@@ -69,3 +69,17 @@ module.exports = router;
 //   console.error(err);
 //   res.status(500).json('Does not compute.')
 // }) 
+
+// router.put('/:id', (req, res) => {
+//   // update a category by its `id` value
+//   Category.update(
+//     {category_name: req.params.category_name},
+//     {where: {id: req.params.id}
+//   })
+//   .then((updatedDbCata) => {res.json(updatedDbCata)})
+//   .catch((err) => {
+//     console.log(err);
+//     res.status(500).json('Data not computed.');
+//   });
+
+// });
