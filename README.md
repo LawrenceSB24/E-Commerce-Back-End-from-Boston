@@ -61,5 +61,10 @@ To use this application, perform the following tasks:
  * Email: lawrs2022@gmail.com or lawrsblundo22@outlook.com
 
  ## Video
+These are the videos for the entire functionality of the application
 
- **Disclaimer** Ok...so for tonight I do not possess the video/gif of the application functionality. I do promise that this will be added tomorrow night at the latest.
+**Disclaimer** So due to screencastify not allowing for more than 5 min of recording time (unless you pay for an upgrade), the video is broken into two parts
+
+Part 1: [Showcase for GET and POST with brief PUT](https://drive.google.com/file/d/1aq6DtzSiOabbdD2NbSHQm4VxV6veSUcW/view)
+
+Part 2: [Showcase for FULL PUT and DELETE](https://drive.google.com/file/d/1nW_Bp7Jnf9wyxTHThuWqsx392pQ4gvTd/view)
